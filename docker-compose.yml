@@ -1,6 +1,6 @@
 version: '3'
 services:
-  strapi:
+  astro:
     container_name: myastrofrontend
     build: .
     image: myastrofrontend:latest
