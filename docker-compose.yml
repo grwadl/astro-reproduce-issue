@@ -1,0 +1,14 @@
+version: '3'
+services:
+  strapi:
+    container_name: myastrofrontend
+    build: .
+    image: myastrofrontend:latest
+    restart: unless-stopped
+    volumes:
+      - ./src:/opt/src/
+      - ./public:/opt/public
+      - ./package.json:/opt/package.json
+      - ./package-lock.json:/opt/package-lock.json
+    ports:
+      - '3000:3000'
